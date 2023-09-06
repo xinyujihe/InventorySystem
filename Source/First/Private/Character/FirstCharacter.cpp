@@ -63,7 +63,7 @@ void AFirstCharacter::Move(const FInputActionValue& Value)
 	const FRotator YawRotation(0.f, Rotation.Yaw, 0.f);
 	
 	const FVector ForwardDirection = FRotationMatrix(YawRotation).GetUnitAxis(EAxis::X);//创建一个全新的旋转矩阵,X是世界坐标当中前进的方向
-	//AddMovementInput(ForwardDirection, MovementVector.Y);
+	AddMovementInput(ForwardDirection, MovementVector.Y);
 	//左右
 	const FVector RightDirection = FRotationMatrix(YawRotation).GetUnitAxis(EAxis::Y);
 	//AddMovementInput(RightDirection, MovementVector.X);
